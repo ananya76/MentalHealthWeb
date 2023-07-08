@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: white;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  background: linear-gradient(to right, #eff1f4, #8be9d3);
+}
+
+.logo h3, span {
+  height: 30px;
+  margin-right: 10px;
+  color: rgb(45, 208, 208);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Add the desired gap value */
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: rgb(22, 22, 234);
+}
+
+
+/* herosection */
+.hero {
+  background-color: white;
+  padding: 40px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-content  {
+  flex: 1;
+}
+
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color:rgb(45, 138, 107);
+  animation: fadeAndFloat 4s ease-in-out infinite;
+  font-family: 'Caprasimo', cursive;
+}
+
+@keyframes fadeAndFloat {
+  0% {
+    transform: translateY(0);
+    opacity: 0.;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}
+
+p {
+  font-size: 20px;
+  color: #8a8787;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+
+
+.right-content img {
+  max-width: 80%;
+  height: 50%;
+  animation: floating 3s ease-in-out infinite; /* Add the animation property */
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Button.css */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #36b99c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.button:hover::before {
+  transform: translateX(100%);
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Card */
+/* Card.css */
+.card {
+  width: 300px;
+  background-color: rgb(169, 220, 194);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #36b99c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* services */
+.services {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.services .heading{
+  margin: 0px auto;
+  margin-bottom: 20px;
+}
+
+.services .card-section{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Therapist */
+.therapy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.therapy .heading{
+  margin-top: 50px;
+}
+.therapy-container {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 100px;
+}
+
+.image-card-scroller{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.content h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #333;
+  width: 100%;
+}
+
+.content p {
+  font-size: 20px;
+  color: #666;
+  text-align: left;
+  width: 100%;
+}
+
+.icons {
+  color: rgb(227, 179, 19);
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.icon{
+  font-size: 40px;
+}
+
+/* DotImageScroller.css */
+.dot-image-scroller {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.image-container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+}
+
+.image-container img {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container img.active {
+  opacity: 1;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+
+/* NewsletterBox.css */
+.newsletter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #80c3ae;
+  width:80%;
+  height: 200px;
+  box-sizing: content-box;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.newsletter-heading {
+  font-size: 35px;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-container {
+  display: flex;
+}
+
+.email-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 600px;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* footer */
+.footer {
+  background: linear-gradient(to right, #eff1f4, #8be9d3);
+  color: #000000;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+.footer-section p {
+  width: 500px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  color: #000000;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* Adjust the icon color on hover if desired */
+.social-icons a:hover {
+  color: #808080;
+}
+
